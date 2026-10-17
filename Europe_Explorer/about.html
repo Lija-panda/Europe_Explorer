@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Europe Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .about-header {
+            background: url('https://images.unsplash.com/photo-1533111059521b0e51241f3d4?q=80&w=2940&auto=format&fit=crop') no-repeat center center/cover;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="index.html" class="logo">EUROPE EXPLORER</a>
+    <div class="nav-links">
+        <a href="index.html#countries" class="back-link">Back to Countries</a>
+        <a href="#" class="auth-btn" onclick="logoutFromDetails(event)">Logout</a>
+    </div>
+</nav>
+
+<header class="detail-header about-header">
+    <h1>About The Continent of Europe</h1>
+</header>
+
+<section class="about-section">
+    <h2 class="section-title">A Gateway to History and Diversity</h2>
+
+    <div class="about-card">
+        <h3>Our Mission</h3>
+        <p>
+            The Europe Explorer site was created as a central, user-friendly resource
+            to highlight the diverse cultures, economies, and historical figures of
+            the European continent. Our goal is to provide essential information—from
+            capital cities and currency to popular culture and famous personalities—
+            in a clean, engaging format.
+        </p>
+    </div>
+
+    <div class="about-card">
+        <h3>Continent Facts</h3>
+        <ul>
+            <li><i class="fas fa-globe-americas"></i> Second Smallest Continent: Covering approximately 10.18 million km².</li>
+            <li><i class="fas fa-users"></i> Population: Home to over 740 million people across dozens of sovereign states.</li>
+            <li><i class="fas fa-landmark"></i> Cultural Diversity: Europe is known as the birthplace of Western civilization, with influences from Ancient Greece and the Roman Empire.</li>
+            <li><i class="fas fa-handshake"></i> The European Union: 27 of its nations are part of this political and economic union.</li>
+        </ul>
+    </div>
+
+    <div class="about-card">
+        <h3>Mandatory Project Requirements</h3>
+        <p>This application demonstrates:</p>
+        <ol>
+            <li>Content Gating: Mandatory Login/Sign Up (simulated) on page load.</li>
+            <li>Data Management: Conceptual Admin Database interface.</li>
+            <li>Advanced UI: Responsive design, CSS animations, card hover effects and smooth navigation.</li>
+        </ol>
+    </div>
+</section>
+
+<footer class="main-footer">
+    <p>&copy; 2025 Europe Explorer. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+function logoutFromDetails(e) {
+    e.preventDefault();
+    sessionStorage.removeItem('isLoggedIn');
+    window.location.href = 'index.html';
+}
+</script>
+</body>
+</html>

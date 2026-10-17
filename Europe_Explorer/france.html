@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>France - Country Information</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .detail-header {
+            background-image: url('https://images.unsplash.com/photo-1543349689-9a4d8442bc02?q=80&w=2940&auto=format&fit=crop');
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="index.html" class="logo">EUROPE EXPLORER</a>
+    <div class="nav-links">
+        <a href="index.html#countries" class="back-link">Back to Countries</a>
+        <a href="#" class="auth-btn" onclick="logoutFromDetails(event)">Logout</a>
+    </div>
+</nav>
+
+<header class="detail-header">
+    <h1>🇫🇷 France: Liberté, Égalité, Fraternité 🇫🇷</h1>
+</header>
+
+<div class="detail-content">
+    <h2>Country Information Overview</h2>
+
+    <div class="info-card-grid">
+        <div class="info-card">
+            <i class="fas fa-city fa-2x" style="color: var(--color-primary);"></i>
+            <h4>Capital City</h4>
+            <p>Paris (The City of Lights)</p>
+        </div>
+
+        <div class="info-card">
+            <i class="fas fa-money-bill-wave fa-2x" style="color: var(--color-primary);"></i>
+            <h4>Currency</h4>
+            <p>Euro (€)</p>
+        </div>
+
+        <div class="info-card">
+            <i class="fas fa-video fa-2x" style="color: var(--color-primary);"></i>
+            <h4>Popular Movies</h4>
+            <p>Amélie, La Haine, The Artist</p>
+        </div>
+
+        <div class="info-card">
+            <i class="fas fa-star fa-2x" style="color: var(--color-primary);"></i>
+            <h4>Famous Persons</h4>
+            <p>Victor Hugo, Marie Curie, Napoleon Bonaparte</p>
+        </div>
+    </div>
+
+    <h3>Top Travel Destinations</h3>
+    <ul>
+        <li>Eiffel Tower: The iconic symbol of Paris and France.</li>
+<li>The Louvre: Home to world-famous art, including the Mona Lisa.</li>
+<li>French Riviera (Côte d'Azur): Stunning Mediterranean coast.</li>
+    </ul>
+    
+</div>
+
+<footer class="main-footer">
+    <p>Explore more countries on Europe Explorer.</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+function logoutFromDetails(e) {
+    e.preventDefault();
+    sessionStorage.removeItem('isLoggedIn');
+    window.location.href = 'index.html';
+}
+</script>
+</body>
+</html>
